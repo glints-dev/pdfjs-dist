@@ -136,6 +136,8 @@ var pdfjsDisplayAnnotationLayer = __w_pdfjs_require__(163);
 
 var pdfjsDisplayDOMUtils = __w_pdfjs_require__(151);
 
+var pdfJSDisplayCanvas = __w_pdfjs_require__(154);
+
 var pdfjsDisplaySVG = __w_pdfjs_require__(164);
 
 var pdfjsDisplayWorkerOptions = __w_pdfjs_require__(156);
@@ -177,6 +179,7 @@ exports.createPromiseCapability = pdfjsSharedUtil.createPromiseCapability;
 exports.PasswordResponses = pdfjsSharedUtil.PasswordResponses;
 exports.InvalidPDFException = pdfjsSharedUtil.InvalidPDFException;
 exports.MissingPDFException = pdfjsSharedUtil.MissingPDFException;
+exports.CanvasGraphics = pdfJSDisplayCanvas.CanvasGraphics;
 exports.SVGGraphics = pdfjsDisplaySVG.SVGGraphics;
 exports.NativeImageDecoding = pdfjsSharedUtil.NativeImageDecoding;
 exports.CMapCompressionType = pdfjsSharedUtil.CMapCompressionType;
