@@ -123,8 +123,8 @@ return /******/ (function(modules) { // webpackBootstrap
 "use strict";
 
 
-var pdfjsVersion = '2.1.266';
-var pdfjsBuild = '81f5835c';
+var pdfjsVersion = '2.1.267';
+var pdfjsBuild = '92b89fa4';
 
 var pdfjsSharedUtil = __w_pdfjs_require__(1);
 
@@ -10135,7 +10135,7 @@ function _fetchDocument(worker, source, pdfDataRangeTransport, docId) {
 
   return worker.messageHandler.sendWithPromise('GetDocRequest', {
     docId: docId,
-    apiVersion: '2.1.266',
+    apiVersion: '2.1.267',
     source: {
       data: source.data,
       url: source.url,
@@ -11208,6 +11208,10 @@ var PDFWorker = function PDFWorkerClosure() {
           var messageHandler = new _message_handler.MessageHandler(id, id + '_worker', port);
           _this7._messageHandler = messageHandler;
 
+          _this7._messageHandler.send('configure', {
+            verbosity: _this7.verbosity
+          });
+
           _this7._readyCapability.resolve();
         }).catch(function (reason) {
           _this7._readyCapability.reject(new Error("Setting up fake worker failed: \"".concat(reason.message, "\".")));
@@ -12209,9 +12213,9 @@ var InternalRenderTask = function InternalRenderTaskClosure() {
   return InternalRenderTask;
 }();
 
-var version = '2.1.266';
+var version = '2.1.267';
 exports.version = version;
-var build = '81f5835c';
+var build = '92b89fa4';
 exports.build = build;
 
 /***/ }),
